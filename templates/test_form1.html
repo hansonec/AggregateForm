@@ -1,0 +1,8 @@
+<form action="." method="post">{% csrf_token %}
+{% for form in aggform %}
+<fieldset>
+	{{ form.as_p }}
+</fieldset>
+{% endfor %}
+<input type="submit" value="Submit"/>
+</form>

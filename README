@@ -1,0 +1,10 @@
+AggregateForm contains multiple Django Forms that can be displayed in a view.
+
+>>> from aggregateform.views import *
+>>> af = AggregateForm(Form1(), Form2())
+>>> for f in af:
+...   f.as_p()
+... 
+u'<p><label for="id_subject">Subject:</label> <input id="id_subject" type="text" name="subject" maxlength="100" /></p>\n<p><label for="id_email">Email:</label> <input type="text" name="email" id="id_email" /></p>'
+u'<p><label for="id_junk">Junk:</label> <input id="id_junk" type="text" name="junk" maxlength="100" /></p>\n<p><label for="id_not_junk">Not junk:</label> <input type="text" name="not_junk" id="id_not_junk" /></p>'
+
